@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Secure Checkout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+    .checkout-container {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .secure-symbol {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 20px 0;
+      justify-content: center;
+      color: #4CAF50;
+      font-weight: bold;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 15px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .svg-icon {
+      width: 24px;
+      height: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="checkout-container">
+    <h2>Secure Checkout</h2>
+    <div class="secure-symbol">
+      <svg class="svg-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 1L3 5v6c0 5.25 3.66 10.74 9 12 5.34-1.26 9-6.75 9-12V5l-9-4z" fill="#4CAF50"/>
+        <path d="M10 14l-2-2 1.41-1.41L10 11.17l4.59-4.59L16 8l-6 6z" fill="#fff"/>
+      </svg>
+      Secure Payment
+    </div>
+    <form>
+      <label for="cardNumber">Card Number</label>
+      <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" required />
+
+      <label for="expiry">Expiry Date</label>
+      <input type="text" id="expiry" placeholder="MM/YY" required />
+
+      <label for="cvv">CVV</label>
+      <input type="text" id="cvv" placeholder="123" required />
+
+      <label for="name">Name on Card</label>
+      <input type="text" id="name" placeholder="Full Name" required />
+
+      <button type="submit">Pay Now</button>
+    </form>
+  </div>
+</body>
+</html>
